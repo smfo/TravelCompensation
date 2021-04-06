@@ -25,7 +25,7 @@ namespace TravelCompensation
             var response = new APIGatewayProxyResponse
             {
                 StatusCode = (int)HttpStatusCode.OK,
-                Body = "Hello AWS Serverless",
+                Body = "Travel compensation",
                 Headers = new Dictionary<string, string> { { "Content-Type", "text/plain" } }
             };
 
