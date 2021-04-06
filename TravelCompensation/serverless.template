@@ -6,7 +6,7 @@
     "Get": {
       "Type": "AWS::Serverless::Function",
       "Properties": {
-        "Handler": "TravelCompensation::TravelCompensation.Functions::Get",
+        "Handler": "TravelCompensation::TravelCompensation.TravelCompensation::Get",
         "Runtime": "dotnetcore3.1",
         "CodeUri": "",
         "MemorySize": 256,
@@ -19,7 +19,7 @@
           "RootGet": {
             "Type": "Api",
             "Properties": {
-              "Path": "/",
+              "Path": "/TravelCompensation/",
               "Method": "GET"
             }
           }

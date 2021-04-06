@@ -1,0 +1,16 @@
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\linux-x64\TravelCompensation.deps.json
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\linux-x64\TravelCompensation.runtimeconfig.json
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\linux-x64\TravelCompensation.runtimeconfig.dev.json
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\linux-x64\TravelCompensation.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\linux-x64\TravelCompensation.pdb
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\linux-x64\Amazon.Lambda.APIGatewayEvents.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\linux-x64\Amazon.Lambda.Core.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\linux-x64\Amazon.Lambda.Serialization.SystemTextJson.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\obj\Release\netcoreapp3.1\linux-x64\TravelCompensation.csprojAssemblyReference.cache
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\obj\Release\netcoreapp3.1\linux-x64\TravelCompensation.AssemblyInfoInputs.cache
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\obj\Release\netcoreapp3.1\linux-x64\TravelCompensation.AssemblyInfo.cs
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\obj\Release\netcoreapp3.1\linux-x64\TravelCompensation.csproj.CoreCompileInputs.cache
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\obj\Release\netcoreapp3.1\linux-x64\TravelCompensation.csproj.CopyComplete
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\obj\Release\netcoreapp3.1\linux-x64\TravelCompensation.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\obj\Release\netcoreapp3.1\linux-x64\TravelCompensation.pdb
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\obj\Release\netcoreapp3.1\linux-x64\TravelCompensation.genruntimeconfig.cache

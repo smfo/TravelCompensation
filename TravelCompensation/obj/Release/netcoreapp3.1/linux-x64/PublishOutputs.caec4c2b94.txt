@@ -1,0 +1,7 @@
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\TravelCompensation.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\TravelCompensation.deps.json
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\TravelCompensation.runtimeconfig.json
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\TravelCompensation.pdb
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.APIGatewayEvents.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Core.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Serialization.SystemTextJson.dll

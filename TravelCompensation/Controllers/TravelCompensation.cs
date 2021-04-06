@@ -12,21 +12,12 @@ using Amazon.Lambda.APIGatewayEvents;
 
 namespace TravelCompensation
 {
-    public class Functions
+    public class TravelCompensation
     {
-        /// <summary>
-        /// Default constructor that Lambda will invoke.
-        /// </summary>
-        public Functions()
+        public TravelCompensation()
         {
         }
 
-
-        /// <summary>
-        /// A Lambda function to respond to HTTP Get methods from API Gateway
-        /// </summary>
-        /// <param name="request"></param>
-        /// <returns>The API Gateway response.</returns>
         public APIGatewayProxyResponse Get(APIGatewayProxyRequest request, ILambdaContext context)
         {
             context.Logger.LogLine("Get Request\n");
