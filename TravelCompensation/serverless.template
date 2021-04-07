@@ -19,7 +19,7 @@
           "RootGet": {
             "Type": "Api",
             "Properties": {
-              "Path": "/TravelCompensation/",
+              "Path": "/TravelCompensation",
               "Method": "GET"
             }
           }
