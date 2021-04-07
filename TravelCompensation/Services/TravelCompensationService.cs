@@ -13,6 +13,8 @@ namespace TravelCompensation.Services
 
         public double CalculateCompensation(Compensation compensation)
         {
+            if (compensation == null) return 0;
+
             double workTripsCost = TravelCosts(compensation.WorkTrips);
             double visitTravelsCost = TravelCosts(compensation.VisitingTravels);
 
