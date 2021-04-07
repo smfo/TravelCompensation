@@ -6,7 +6,7 @@
     "Get": {
       "Type": "AWS::Serverless::Function",
       "Properties": {
-        "Handler": "TravelCompensation::TravelCompensation.TravelCompensation::Get",
+        "Handler": "TravelCompensation::TravelCompensation.Controllers.TravelCompensation::Get",
         "Runtime": "dotnetcore3.1",
         "CodeUri": "",
         "MemorySize": 256,

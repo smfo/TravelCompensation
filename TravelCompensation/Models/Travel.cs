@@ -4,9 +4,9 @@ using System.Text;
 
 namespace TravelCompensation.Models
 {
-    public interface Travel
+    public class Travel
     {
-        double Distance { get; set; }
-        int NumberOfTrimps { get; set; }
+        public double Distance { get; set; }
+        public int NumberOfTrimps { get; set; }
     }
 }

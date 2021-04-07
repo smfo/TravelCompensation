@@ -10,7 +10,7 @@ namespace TravelCompensation.Services
     {
         public double CalculateCompensation(Compensation compensation)
         {
-            throw new NotImplementedException();
+            return 50000;
         }
     }
 }

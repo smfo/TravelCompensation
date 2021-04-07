@@ -4,10 +4,10 @@ using System.Text;
 
 namespace TravelCompensation.Models
 {
-    public interface Compensation
+    public class Compensation
     {
-        Travel[] WorkTrips { get; set; }
-        Travel[] VisitingTravels { get; set; }
-        int ToolExpenses { get; set; }
+        public Travel[] WorkTrips { get; set; }
+        public Travel[] VisitingTravels { get; set; }
+        public int ToolExpenses { get; set; }
     }
 }
