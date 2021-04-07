@@ -7,6 +7,6 @@ namespace TravelCompensation.Services.Interfaces
 {
     public interface ITravelCompensationService
     {
-        public double CalculateCompensation(Compensation compensation);
+        public double CalculateCompensation(TravelExpenses compensation);
     }
 }

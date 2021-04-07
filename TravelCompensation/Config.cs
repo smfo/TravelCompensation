@@ -11,7 +11,7 @@ namespace TravelCompensation
         public double LOWER_DISTANCE_COMPENSATION = 1.5;
         public double HIGHER_DISTANCE_COMPENSATION = 0.7;
 
-        public int LOWER_TOLL_LIMIT = 34000;
+        public int LOWER_TOLL_LIMIT = 3400;
 
         public int EXCESS = 22000;
     }

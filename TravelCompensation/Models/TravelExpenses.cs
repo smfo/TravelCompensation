@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TravelCompensation.Models
 {
-    public class Compensation
+    public class TravelExpenses
     {
         public Travel[] WorkTrips { get; set; }
         public Travel[] VisitingTravels { get; set; }

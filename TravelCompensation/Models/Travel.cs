@@ -7,6 +7,6 @@ namespace TravelCompensation.Models
     public class Travel
     {
         public double Distance { get; set; }
-        public int NumberOfTrimps { get; set; }
+        public int NumberOfTrips { get; set; }
     }
 }

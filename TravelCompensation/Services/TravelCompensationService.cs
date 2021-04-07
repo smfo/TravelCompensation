@@ -11,14 +11,14 @@ namespace TravelCompensation.Services
 
         private Config config = new Config();
 
-        public double CalculateCompensation(Compensation compensation)
+        public double CalculateCompensation(TravelExpenses expenses)
         {
-            if (compensation == null) return 0;
+            if (expenses == null) return 0;
 
-            double workTripsCost = TravelCosts(compensation.WorkTrips);
-            double visitTravelsCost = TravelCosts(compensation.VisitingTravels);
+            double workTripsCost = TravelCosts(expenses.WorkTrips);
+            double visitTravelsCost = TravelCosts(expenses.VisitingTravels);
 
-            double tollsCosts = TollCost(compensation.ToolExpenses);
+            double tollsCosts = TollCost(expenses.ToolExpenses);
 
             double totalTravelCosts = workTripsCost + visitTravelsCost + tollsCosts;
 
@@ -36,14 +36,18 @@ namespace TravelCompensation.Services
         {
             double totalTravelCosts = 0;
 
-            foreach(Travel travel in travels)
+            if (travels != null)
             {
-                double costPerTrip;
-                double[] distances = CalculateDistancesToCompensate(travel);
 
-                costPerTrip = distances[0] * config.LOWER_DISTANCE_COMPENSATION + distances[1] * config.HIGHER_DISTANCE_COMPENSATION;
+                foreach (Travel travel in travels)
+                {
+                    double costPerTrip;
+                    double[] distances = CalculateDistancesToCompensate(travel);
 
-                totalTravelCosts += costPerTrip;
+                    costPerTrip = distances[0] * config.LOWER_DISTANCE_COMPENSATION + distances[1] * config.HIGHER_DISTANCE_COMPENSATION;
+
+                    totalTravelCosts += costPerTrip * travel.NumberOfTrips;
+                }
             }
 
             return totalTravelCosts;
