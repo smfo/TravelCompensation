@@ -6,7 +6,7 @@ using TravelCompensation.Services.Interfaces;
 
 namespace TravelCompensation.Services
 {
-    class TravelCompensationService : ITravelCompensationService
+    public class TravelCompensationService : ITravelCompensationService
     {
         public double CalculateCompensation(Compensation compensation)
         {

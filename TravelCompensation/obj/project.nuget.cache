@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "H6iMhuozktn0Xj66D9pHArQE7fxoR423GSjuQOMYvvRBKm4qC6xVgxAfSKsm30aW+mrrAr2ZcGJ5WDsbG638cA==",
+  "dgSpecHash": "HY/2z1hpAKE31rXD6Gh31LANo7N2eHQSwGgRJeBWBJ3RZD8m5kieUae916C5MyuyEdYw5OkpNMwJlUQjyf8SWw==",
   "success": true,
   "projectFilePath": "C:\\Users\\synne\\source\\repos\\TravelCompensation\\TravelCompensation\\TravelCompensation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\synne\\.nuget\\packages\\amazon.lambda.apigatewayevents\\2.4.0\\amazon.lambda.apigatewayevents.2.4.0.nupkg.sha512",
     "C:\\Users\\synne\\.nuget\\packages\\amazon.lambda.core\\1.2.0\\amazon.lambda.core.1.2.0.nupkg.sha512",
-    "C:\\Users\\synne\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.1.0\\amazon.lambda.serialization.systemtextjson.2.1.0.nupkg.sha512"
+    "C:\\Users\\synne\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.1.0\\amazon.lambda.serialization.systemtextjson.2.1.0.nupkg.sha512",
+    "C:\\Users\\synne\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\synne\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
+    "C:\\Users\\synne\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\synne\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
