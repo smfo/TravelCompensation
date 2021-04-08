@@ -5,10 +5,13 @@ namespace TravelCompensation.Configuration
 {
     public class LambdaConfig : ILambdaConfig
     {
-        public IConfiguration Configuration => new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .Build();
+        public static IConfigurationRoot Configuration => new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .Build();
+
+
+        IConfigurationRoot ILambdaConfig.Configuration => Configuration;
 
     }
 }

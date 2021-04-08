@@ -4,6 +4,6 @@ namespace TravelCompensation.Configuration
 {
     public interface ILambdaConfig
     {
-        IConfiguration Configuration { get; }
+        IConfigurationRoot Configuration { get; }
     }
 }

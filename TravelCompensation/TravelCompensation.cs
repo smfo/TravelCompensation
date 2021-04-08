@@ -1,15 +1,13 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Threading.Tasks;
 
 using Amazon.Lambda.Core;
 using Amazon.Lambda.APIGatewayEvents;
 using TravelCompensation.Services.Interfaces;
-using TravelCompensation.Services;
 using TravelCompensation.Models;
 using Newtonsoft.Json;
+using TravelCompensation.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 // Assembly attribute to enable the Lambda function's JSON input to be converted into a .NET class.
 [assembly: LambdaSerializer(typeof(Amazon.Lambda.Serialization.SystemTextJson.DefaultLambdaJsonSerializer))]
@@ -21,12 +19,12 @@ namespace TravelCompensation
 
         protected ITravelCompensationService CompensationService;
 
-        public TravelCompensation()
+        public TravelCompensation(ITravelCompensationService serviceProvider)
         {
-            CompensationService = new TravelCompensationService();
+            CompensationService = serviceProvider;
         }
 
-        public APIGatewayProxyResponse CalculateCompensation(LambdaRequest requeste)
+        public APIGatewayProxyResponse CalculateCompensation(LambdaRequest requeste, ILambdaContext context)
         {
             var response = new APIGatewayProxyResponse();
 

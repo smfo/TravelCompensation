@@ -6,20 +6,31 @@
 //using TravelCompensation.Services;
 //using TravelCompensation.Services.Interfaces;
 
-//namespace TravelCompensation
-//{
-//    public class StartUp
-//    {
-//        //public static IServiceCollection Container => ConfigureServices(LambdaConfiguration.Configuration);
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using TravelCompensation.Configuration;
+using TravelCompensation.Services;
+using TravelCompensation.Services.Interfaces;
 
-//        private static IServiceCollection ConfigureServices(IConfigurationRoot root)
-//        {
+namespace TravelCompensation
+{
+    public class StartUp
+    {
+        public static IServiceCollection Container => ConfigureServices(LambdaConfig.Configuration);
 
-//            var services = new ServiceCollection();
+        private static IServiceCollection ConfigureServices(IConfigurationRoot root)
+        {
 
-//            services.AddTransient<ITravelCompensationService, TravelCompensationService>();
+            var services = new ServiceCollection();
 
-//            return services;
-//        }
-//    }
-//}
+            //Wire up all your dependencies here
+            //services.Configure<Greeting>(options =>
+            //    root.GetSection("greeting").Bind(options));
+
+            services.AddTransient<ITravelCompensationService, TravelCompensationService>();
+
+            return services;
+        }
+    }
+
+}

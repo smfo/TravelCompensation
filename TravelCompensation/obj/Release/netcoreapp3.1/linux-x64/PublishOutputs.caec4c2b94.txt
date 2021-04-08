@@ -5,8 +5,16 @@ C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\ne
 C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.APIGatewayEvents.dll
 C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Core.dll
 C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Serialization.SystemTextJson.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.Configuration.dll
 C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.Configuration.Json.dll
 C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.FileSystemGlobbing.dll
 C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Microsoft.Extensions.Primitives.dll
 C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\Newtonsoft.Json.dll
+C:\Users\synne\source\repos\TravelCompensation\TravelCompensation\bin\Release\netcoreapp3.1\publish\System.Text.Json.dll
