@@ -19,7 +19,7 @@ namespace TravelCompensation
     public class TravelCompensation
     {
 
-        public ITravelCompensationService CompensationService;
+        protected ITravelCompensationService CompensationService;
 
         public TravelCompensation()
         {
@@ -28,24 +28,27 @@ namespace TravelCompensation
 
         public APIGatewayProxyResponse CalculateCompensation(LambdaRequest requeste)
         {
-            TravelExpenses travelExpenses = JsonConvert.DeserializeObject<TravelExpenses>(requeste.Body);
+            var response = new APIGatewayProxyResponse();
 
-            string compensation;
-
-            try
+            if (requeste == null || requeste.Body == null)
             {
-                compensation = CompensationService.CalculateCompensation(travelExpenses).ToString();
+                response.StatusCode = (int)HttpStatusCode.NoContent;
+                response.Body = "No compensation data provided";
             }
-            catch(Exception error)
+            else
             {
-                compensation = "Error while calculation compensation: " + error;
-            }
+                TravelExpenses travelExpenses = JsonConvert.DeserializeObject<TravelExpenses>(requeste.Body);
+                List<double> results = CompensationService.CalculateCompensation(travelExpenses);
 
-            var response = new APIGatewayProxyResponse
-            {
-                StatusCode = (int)HttpStatusCode.OK,
-                Body = compensation,
-            };
+                Response responseJson = new Response()
+                {
+                    TravelCompensation = results[0],
+                    TravelExpenses = results[1]
+                };
+
+                response.StatusCode = (int)HttpStatusCode.OK;
+                response.Body = JsonConvert.SerializeObject(responseJson);
+            }
 
             return response;
         }

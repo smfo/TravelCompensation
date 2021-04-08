@@ -6,8 +6,8 @@ namespace TravelCompensation.Models
 {
     public class TravelExpenses
     {
-        public Travel[] WorkTrips { get; set; }
-        public Travel[] VisitingTravels { get; set; }
-        public int ToolExpenses { get; set; }
+        public List<Travel> WorkTrips { get; set; }
+        public List<Travel> VisitingTravels { get; set; }
+        public int TollExpenses { get; set; }
     }
 }

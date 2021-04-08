@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using TravelCompensation.Models;
 using TravelCompensation.Services.Interfaces;
 
@@ -11,20 +9,28 @@ namespace TravelCompensation.Services
 
         private Config config = new Config();
 
-        public double CalculateCompensation(TravelExpenses expenses)
+        public List<double> CalculateCompensation(TravelExpenses expenses)
         {
-            if (expenses == null) return 0;
+            double workTripsCost = 0;
+            double visitTravelsCost = 0;
 
-            double workTripsCost = TravelCosts(expenses.WorkTrips);
-            double visitTravelsCost = TravelCosts(expenses.VisitingTravels);
+            if (expenses.WorkTrips != null)
+            {
+                workTripsCost = TravelCosts(expenses.WorkTrips);
+            }
 
-            double tollsCosts = TollCost(expenses.ToolExpenses);
+            if(expenses.VisitingTravels != null)
+            {
+                visitTravelsCost = TravelCosts(expenses.VisitingTravels);
+            }
 
-            double totalTravelCosts = workTripsCost + visitTravelsCost + tollsCosts;
+            double tollsCompensation = TollCost(expenses.TollExpenses);
+
+            double totalTravelCosts = workTripsCost + visitTravelsCost + tollsCompensation;
 
             double travelCompensation = totalTravelCosts >= config.EXCESS ? totalTravelCosts - config.EXCESS : 0;
 
-            return travelCompensation;
+            return new List<double> { travelCompensation, totalTravelCosts };
         }
 
         private double TollCost(double tollExpenses)
@@ -32,28 +38,24 @@ namespace TravelCompensation.Services
             return tollExpenses >= config.LOWER_TOLL_LIMIT ? tollExpenses : 0;
         }
 
-        private double TravelCosts(Travel[] travels)
+        private double TravelCosts(List<Travel> travels)
         {
             double totalTravelCosts = 0;
 
-            if (travels != null)
+            foreach (Travel travel in travels)
             {
+                double costPerTrip;
+                List<double> distances = CalculateDistancesToCompensate(travel);
 
-                foreach (Travel travel in travels)
-                {
-                    double costPerTrip;
-                    double[] distances = CalculateDistancesToCompensate(travel);
+                costPerTrip = distances[0] * config.LOWER_DISTANCE_COMPENSATION + distances[1] * config.HIGHER_DISTANCE_COMPENSATION;
 
-                    costPerTrip = distances[0] * config.LOWER_DISTANCE_COMPENSATION + distances[1] * config.HIGHER_DISTANCE_COMPENSATION;
-
-                    totalTravelCosts += costPerTrip * travel.NumberOfTrips;
-                }
+                totalTravelCosts += costPerTrip * travel.NumberOfTrips;
             }
 
             return totalTravelCosts;
         }
 
-        private double[] CalculateDistancesToCompensate(Travel travel)
+        private List<double> CalculateDistancesToCompensate(Travel travel)
         {
             double lowCompensationDistance;
             double highCompensationDistance;
@@ -75,7 +77,7 @@ namespace TravelCompensation.Services
                 highCompensationDistance = 0;
             }
 
-            double[] distances = new double[] { lowCompensationDistance, highCompensationDistance };
+            List<double> distances = new List<double> { lowCompensationDistance, highCompensationDistance };
 
             return distances;
         }
