@@ -7,8 +7,6 @@ namespace TravelCompensation.Services
     public class TravelCompensationService : ITravelCompensationService
     {
 
-        private Config config = new Config();
-
         public List<double> CalculateCompensation(TravelExpenses expenses)
         {
             double workTripsCost = 0;
@@ -28,14 +26,14 @@ namespace TravelCompensation.Services
 
             double totalTravelCosts = workTripsCost + visitTravelsCost + tollsCompensation;
 
-            double travelCompensation = totalTravelCosts >= config.EXCESS ? totalTravelCosts - config.EXCESS : 0;
+            double travelCompensation = totalTravelCosts >= Config.EXCESS ? totalTravelCosts - Config.EXCESS : 0;
 
             return new List<double> { travelCompensation, totalTravelCosts };
         }
 
         private double TollCost(double tollExpenses)
         {
-            return tollExpenses >= config.LOWER_TOLL_LIMIT ? tollExpenses : 0;
+            return tollExpenses >= Config.LOWER_TOLL_LIMIT ? tollExpenses : 0;
         }
 
         private double TravelCosts(List<Travel> travels)
@@ -47,7 +45,7 @@ namespace TravelCompensation.Services
                 double costPerTrip;
                 List<double> distances = CalculateDistancesToCompensate(travel);
 
-                costPerTrip = distances[0] * config.LOWER_DISTANCE_COMPENSATION + distances[1] * config.HIGHER_DISTANCE_COMPENSATION;
+                costPerTrip = distances[0] * Config.LOWER_DISTANCE_COMPENSATION + distances[1] * Config.HIGHER_DISTANCE_COMPENSATION;
 
                 totalTravelCosts += costPerTrip * travel.NumberOfTrips;
             }
@@ -61,19 +59,19 @@ namespace TravelCompensation.Services
             double highCompensationDistance;
 
             double distance = travel.Distance;
-            if (distance > config.MAX_DISTANCE_IN_KM)
+            if (distance > Config.MAX_DISTANCE_IN_KM)
             {
-                distance = config.MAX_DISTANCE_IN_KM;
+                distance = Config.MAX_DISTANCE_IN_KM;
             }
 
-            if (distance <= config.LOWER_DISTANCE_LIMIT_IN_KM)
+            if (distance <= Config.LOWER_DISTANCE_LIMIT_IN_KM)
             {
                 lowCompensationDistance = distance;
                 highCompensationDistance = distance - lowCompensationDistance;
             }
             else
             {
-                lowCompensationDistance = config.LOWER_DISTANCE_LIMIT_IN_KM;
+                lowCompensationDistance = Config.LOWER_DISTANCE_LIMIT_IN_KM;
                 highCompensationDistance = 0;
             }
 
@@ -81,5 +79,17 @@ namespace TravelCompensation.Services
 
             return distances;
         }
+    }
+
+    public static class Config
+    {
+        public const int MAX_DISTANCE_IN_KM = 75000;
+        public const int LOWER_DISTANCE_LIMIT_IN_KM = 50000;
+        public const double LOWER_DISTANCE_COMPENSATION = 1.5;
+        public const double HIGHER_DISTANCE_COMPENSATION = 0.7;
+
+        public const int LOWER_TOLL_LIMIT = 3400;
+
+        public const int EXCESS = 22000;
     }
 }
